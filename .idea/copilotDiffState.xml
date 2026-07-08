@@ -11,6 +11,38 @@
             </PendingDiffInfo>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/discovery-server/Dockerfile">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/discovery-server/Dockerfile" />
+              <option name="updatedContent" value="FROM eclipse-temurin:21-jdk-alpine&#10;ARG JAR_FILE=target/*.jar&#10;COPY ${JAR_FILE} /app/app.jar&#10;WORKDIR /app&#10;EXPOSE 8761&#10;ENTRYPOINT [&quot;java&quot;,&quot;-jar&quot;,&quot;/app/app.jar&quot;]&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/discovery-server/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/discovery-server/README.md" />
+              <option name="updatedContent" value="# discovery-server&#10;&#10;Spring Boot Eureka Discovery Server for NextGen Banking Platform.&#10;&#10;This module provides service registration and discovery for microservices.&#10;&#10;Quick start (requires Maven &amp; Java 21):&#10;&#10;```powershell&#10;cd &quot;C:\Users\Sirisha Sankurathri\backend\nextgen-banking-platform\discovery-server&quot;&#10;mvn -U clean package -DskipTests&#10;java -jar target\discovery-server-*.jar&#10;```&#10;&#10;Run with Docker:&#10;&#10;```powershell&#10;cd &quot;C:\Users\Sirisha Sankurathri\backend\nextgen-banking-platform\discovery-server&quot;&#10;docker build -t nextgenbank/discovery-server:latest .&#10;docker run -p 8761:8761 nextgenbank/discovery-server:latest&#10;```&#10;&#10;Notes:&#10;- The existing `pom.xml` uses the parent project `nextgen-banking-platform`. Keep versions aligned when upgrading Spring Boot / Spring Cloud.&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/discovery-server/src/main/resources/banner.txt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/discovery-server/src/main/resources/banner.txt" />
+              <option name="updatedContent" value="  ____  _                 _                        _                &#10; |  _ \(_) ___  ___ _ __ | |__   ___  _ __   ___  | |    ___   __ _ &#10; | | | | |/ _ \/ __| '_ \| '_ \ / _ \| '_ \ / _ \ | |   / _ \ / _` |&#10; | |_| | |  __/ (__| |_) | | | | (_) | | | |  __/ | |__| (_) | (_| |&#10; |____/|_|\___|\___| .__/|_| |_|\___/|_| |_|\___| |_____\___/ \__, |&#10;                   |_|                                         |___/ &#10;&#10;NextGen Banking - Discovery Server&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/discovery-server/src/test/java/com/nextgenbank/discovery/DiscoveryServerApplicationTests.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/discovery-server/src/test/java/com/nextgenbank/discovery/DiscoveryServerApplicationTests.java" />
+              <option name="updatedContent" value="package com.nextgenbank.discovery;&#10;&#10;import org.junit.jupiter.api.Test;&#10;import org.springframework.boot.test.context.SpringBootTest;&#10;&#10;@SpringBootTest&#10;class DiscoveryServerApplicationTests {&#10;&#10;    @Test&#10;    void contextLoads() {&#10;    }&#10;&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/docker/README.md">
           <value>
             <PendingDiffInfo>
@@ -80,6 +112,62 @@
             <PendingDiffInfo>
               <option name="filePath" value="$PROJECT_DIR$/services/README.md" />
               <option name="updatedContent" value="# Services&#10;&#10;This directory contains all microservices for the banking platform.&#10;&#10;## Microservices:&#10;- Account Service&#10;- Transaction Service&#10;- Authentication Service&#10;- Notification Service&#10;- User Service&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/services/discovery-server/Dockerfile">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/services/discovery-server/Dockerfile" />
+              <option name="updatedContent" value="# Simple Dockerfile that expects a Spring Boot fat jar in target/&#10;FROM eclipse-temurin:21-jdk-alpine&#10;ARG JAR_FILE=target/*.jar&#10;COPY ${JAR_FILE} /app/app.jar&#10;WORKDIR /app&#10;EXPOSE 8761&#10;ENTRYPOINT [&quot;java&quot;,&quot;-jar&quot;,&quot;/app/app.jar&quot;]&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/services/discovery-server/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/services/discovery-server/README.md" />
+              <option name="updatedContent" value="# discovery-server&#10;&#10;A small Spring Boot-based Discovery Server (Eureka) used by the NextGen Banking Platform for service registration and discovery.&#10;&#10;This module is intentionally minimal and intended as a starting point. It contains:&#10;&#10;- `src/main/java/com/nextgenbank/discovery/DiscoveryServerApplication.java` - Spring Boot application entry point&#10;- `src/main/resources/application.yml` - basic configuration for the discovery server&#10;- `Dockerfile` - lightweight Docker image that runs the built jar&#10;- `pom.xml` - Maven build configuration&#10;&#10;Quick build &amp; run (requires Maven and Java 21):&#10;&#10;```powershell&#10;cd services\discovery-server&#10;mvn -U clean package -DskipTests&#10;java -jar target\discovery-server-0.0.1-SNAPSHOT.jar&#10;```&#10;&#10;To build and run with Docker (expects the jar produced in `target/`):&#10;&#10;```powershell&#10;docker build -t nextgenbank/discovery-server:latest .&#10;docker run -p 8761:8761 nextgenbank/discovery-server:latest&#10;```&#10;&#10;Notes:&#10;- This project includes `spring-cloud-starter-netflix-eureka-server` and the matching Spring Cloud BOM. If you plan to change Spring Boot / Spring Cloud versions, update the BOM and parent version in `pom.xml` accordingly.&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/services/discovery-server/pom.xml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/services/discovery-server/pom.xml" />
+              <option name="updatedContent" value="&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;&#10;         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;&#10;    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;&#10;&#10;    &lt;groupId&gt;com.nextgenbank&lt;/groupId&gt;&#10;    &lt;artifactId&gt;discovery-server&lt;/artifactId&gt;&#10;    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;&#10;    &lt;packaging&gt;jar&lt;/packaging&gt;&#10;&#10;    &lt;parent&gt;&#10;        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&#10;        &lt;version&gt;3.1.6&lt;/version&gt;&#10;        &lt;relativePath/&gt;&#10;    &lt;/parent&gt;&#10;&#10;    &lt;properties&gt;&#10;        &lt;java.version&gt;21&lt;/java.version&gt;&#10;        &lt;spring-cloud.version&gt;2023.0.5&lt;/spring-cloud.version&gt;&#10;    &lt;/properties&gt;&#10;&#10;    &lt;dependencyManagement&gt;&#10;        &lt;dependencies&gt;&#10;            &lt;dependency&gt;&#10;                &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;&#10;                &lt;artifactId&gt;spring-cloud-dependencies&lt;/artifactId&gt;&#10;                &lt;version&gt;${spring-cloud.version}&lt;/version&gt;&#10;                &lt;type&gt;pom&lt;/type&gt;&#10;                &lt;scope&gt;import&lt;/scope&gt;&#10;            &lt;/dependency&gt;&#10;        &lt;/dependencies&gt;&#10;    &lt;/dependencyManagement&gt;&#10;&#10;    &lt;dependencies&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;&#10;            &lt;scope&gt;test&lt;/scope&gt;&#10;        &lt;/dependency&gt;&#10;    &lt;/dependencies&gt;&#10;&#10;    &lt;build&gt;&#10;        &lt;plugins&gt;&#10;            &lt;plugin&gt;&#10;                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;&#10;            &lt;/plugin&gt;&#10;        &lt;/plugins&gt;&#10;    &lt;/build&gt;&#10;&lt;/project&gt;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/services/discovery-server/src/main/java/com/nextgenbank/discovery/DiscoveryServerApplication.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/services/discovery-server/src/main/java/com/nextgenbank/discovery/DiscoveryServerApplication.java" />
+              <option name="updatedContent" value="package com.nextgenbank.discovery;&#10;&#10;import org.springframework.boot.SpringApplication;&#10;import org.springframework.boot.autoconfigure.SpringBootApplication;&#10;import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;&#10;&#10;@SpringBootApplication&#10;@EnableEurekaServer&#10;public class DiscoveryServerApplication {&#10;    public static void main(String[] args) {&#10;        SpringApplication.run(DiscoveryServerApplication.class, args);&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/services/discovery-server/src/main/resources/application.yml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/services/discovery-server/src/main/resources/application.yml" />
+              <option name="updatedContent" value="spring:&#10;  application:&#10;    name: discovery-server&#10;&#10;server:&#10;  port: 8761&#10;&#10;eureka:&#10;  client:&#10;    register-with-eureka: false&#10;    fetch-registry: false&#10;  server:&#10;    wait-time-in-ms-when-sync-empty: 0&#10;&#10;management:&#10;  endpoints:&#10;    web:&#10;      exposure:&#10;        include: health,info&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/services/discovery-server/src/main/resources/banner.txt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/services/discovery-server/src/main/resources/banner.txt" />
+              <option name="updatedContent" value="  ____  _                 _                        _                &#10; |  _ \(_) ___  ___ _ __ | |__   ___  _ __   ___  | |    ___   __ _ &#10; | | | | |/ _ \/ __| '_ \| '_ \ / _ \| '_ \ / _ \ | |   / _ \ / _` |&#10; | |_| | |  __/ (__| |_) | | | | (_) | | | |  __/ | |__| (_) | (_| |&#10; |____/|_|\___|\___| .__/|_| |_|\___/|_| |_|\___| |_____\___/ \__, |&#10;                   |_|                                         |___/ &#10;&#10;NextGen Banking - Discovery Server&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/services/discovery-server/src/test/java/com/nextgenbank/discovery/DiscoveryServerApplicationTests.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/services/discovery-server/src/test/java/com/nextgenbank/discovery/DiscoveryServerApplicationTests.java" />
+              <option name="updatedContent" value="package com.nextgenbank.discovery;&#10;&#10;import org.junit.jupiter.api.Test;&#10;import org.springframework.boot.test.context.SpringBootTest;&#10;&#10;@SpringBootTest&#10;class DiscoveryServerApplicationTests {&#10;&#10;    @Test&#10;    void contextLoads() {&#10;    }&#10;&#10;}&#10;" />
             </PendingDiffInfo>
           </value>
         </entry>
