@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/.github/workflows/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/.github/workflows/README.md" />
+              <option name="updatedContent" value="# GitHub Actions Workflows&#10;&#10;This directory contains CI/CD workflow configurations.&#10;&#10;## Workflows:&#10;- Build and Test&#10;- Code Quality Analysis&#10;- Security Scanning&#10;- Deployment Pipelines&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/docker/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/docker/README.md" />
+              <option name="updatedContent" value="# Docker Configuration&#10;&#10;This directory contains Docker files for containerizing the application.&#10;&#10;## Contents:&#10;- Dockerfile for microservices&#10;- docker-compose.yml for local development&#10;- Docker build scripts&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/docs/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/docs/README.md" />
+              <option name="updatedContent" value="# Documentation&#10;&#10;This directory contains all project documentation.&#10;&#10;## Subdirectories:&#10;- **architecture/** - Architecture decisions and diagrams&#10;- **api/** - API specifications and documentation&#10;- **decisions/** - Architecture Decision Records (ADRs)&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/docs/api/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/docs/api/README.md" />
+              <option name="updatedContent" value="# API Documentation&#10;&#10;This directory contains REST API specifications and documentation.&#10;&#10;## Contents:&#10;- API endpoint documentation&#10;- Request/Response examples&#10;- Authentication and authorization&#10;- Rate limiting specifications&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/docs/architecture/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/docs/architecture/README.md" />
+              <option name="updatedContent" value="# Architecture&#10;&#10;This directory contains architecture documentation and diagrams for the nextgen-banking-platform.&#10;&#10;## Contents:&#10;- System architecture diagrams&#10;- Component design specifications&#10;- Technology stack documentation&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/docs/decisions/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/docs/decisions/README.md" />
+              <option name="updatedContent" value="# Architecture Decision Records (ADRs)&#10;&#10;This directory contains Architecture Decision Records documenting important technical decisions.&#10;&#10;## Format:&#10;Each decision is documented with:&#10;- Context: Why the decision was needed&#10;- Decision: What was decided&#10;- Consequences: Implications of the decision&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/kubernetes/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/kubernetes/README.md" />
+              <option name="updatedContent" value="# Kubernetes Configuration&#10;&#10;This directory contains Kubernetes manifests for deployment.&#10;&#10;## Contents:&#10;- Deployment configurations&#10;- Service definitions&#10;- ConfigMaps and Secrets&#10;- Ingress configuration&#10;- Persistent Volume claims&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/postman/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/postman/README.md" />
+              <option name="updatedContent" value="# Postman Collections&#10;&#10;This directory contains Postman collections for API testing.&#10;&#10;## Contents:&#10;- API endpoint collections&#10;- Environment variables&#10;- Pre-request scripts&#10;- Test scripts&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/scripts/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/scripts/README.md" />
+              <option name="updatedContent" value="# Scripts&#10;&#10;This directory contains utility scripts for building, testing, and deployment.&#10;&#10;## Scripts:&#10;- Build scripts&#10;- Deployment scripts&#10;- Database migration scripts&#10;- Testing utilities&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/services/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/services/README.md" />
+              <option name="updatedContent" value="# Services&#10;&#10;This directory contains all microservices for the banking platform.&#10;&#10;## Microservices:&#10;- Account Service&#10;- Transaction Service&#10;- Authentication Service&#10;- Notification Service&#10;- User Service&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
